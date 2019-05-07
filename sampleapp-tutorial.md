@@ -1,5 +1,5 @@
 ​                                                
- 
+
 
 
 
@@ -12,7 +12,7 @@
 
 
 
- 
+
 
 # 클라우드 기반 창업 플랫폼 소개
 
@@ -35,9 +35,9 @@
 개방형 클라우드 상에서 동작하는 마이크로서비스 기반 개발 시 마이크로서비스를 쉽게 구성할 수 있고 앱 간의 호출 관계를 비주얼 편집기를 통해 제공하고 개발된 마이크로서비스 앱에 정의된 API를 공개하고 사용할 수 있도록 구성되어 있다. 
 
 
- 
 
- 
+
+
 
 ## 시스템 구성도
 
@@ -58,11 +58,11 @@
 창업 플랫폼은 창업 개발자를 위한 세가지의 서비스를 포함하고 있다. 오픈데이터API 게이트웨이 시스템은 PaaS-TA 상에서 제공되는 서비스는 아니기 때문에 언제 어디서나 구분없이 사용이 가능하다. 나머지 서비스 브로커와 마이크로서비스 스튜디오는 PaaS-TA 상에서 동작하기 때문에 사용하기 이전에 PaaS-TA 계정이 있는지 확인이 필요하다.
 
 
- 
 
- 
 
- 
+
+
+
 
 ## PaaS-TA 사용하기
 
@@ -88,13 +88,13 @@
 
 ## 샘플 앱
 
-창업 플랫폼에서 제공하고 있는 기능과 서비스를 이용하여 업종별 창업 지역을 찾아주는 웹사이트를 만들고자 한다. 
+창업 플랫폼에서 제공하고 있는 기능과 서비스를 이용하여 업종별 창업 지역을 찾아주는 웹사이트를 만들고자 한다.  창업 플랫폼의 핵심 지원 서비스인 오픈데이터API 포털을 이용하여 해당되는 API 정보를 가져오고 빅데이터서비스 브로커와 AI기반 상권분석 브로커를 이용하여 API로 호출된 정보를 저장/분석/가공과 같은 기능을 이용하여 필요한 정보를 제공하는 앱을 만든다.  *[본 샘플 앱 프로젝트는 마이크로서비스 기반으로 개발을 위해 앱을 여러개로 분할하여 개발을 수행한다. 여기에서는 프론트엔드앱과 백엔드앱 각각 1개씩 개별 개발하여 구축하는 순서로 설명한다]*
 
 
 
-###### 개발 환경 요구사항
+### 개발 환경 요구사항
 
-| 개발 언어    | 버전  |
+| 요구사항     | 버전  |
 | ------------ | ----- |
 | AngularJS    |       |
 | Java         | 1.8   |
@@ -102,29 +102,17 @@
 | Spring Cloud | 1.6.1 |
 | swagger API  | 2.0.0 |
 
+###### Service Broker 요구사항
+
+ankus service broker 
+
 ###### Open PaaS 요구사항
 
 PaaS-TA 3.0(Penne)
 
 <https://guide.paas-ta.kr/guide-3.5-penne>
 
-
-
-### 마이크로서비스 개요
-
-\-       업무상의 기능 또는 역할을 하나의 기능 묶음으로 개발된 컴포넌트 → 한 가지의 역할만 수행  
-
-\-       REST API 등을 통하여 서비스들의 기능을 제공하고 사용 
-
-\-       데이터를 공유하지 않고 서비스 별로 독립적으로 가공하고 저장함
-
-   
-
-마이크로서비스 참조  - <http://microservices.io>
-
-
-
-개발하는 웹사이트에서 제공하는 주요 기능은 아래와 같다.
+샘플앱에서 제공하는 주요 기능은 아래와 같다.
 
 ### 주요 기능
 
@@ -157,10 +145,213 @@ PaaS-TA 3.0(Penne)
 \-       마이크로서비스 기반으로 앱 분할 및 아키텍처 구성
 
 
-  
+
+### 마이크로서비스 개요
+
+\-       업무상의 기능 또는 역할을 하나의 기능 묶음으로 개발된 컴포넌트 → 한 가지의 역할만 수행  
+
+\-       REST API 등을 통하여 서비스들의 기능을 제공하고 사용 
+
+\-       데이터를 공유하지 않고 서비스 별로 독립적으로 가공하고 저장함
+
+   
+
+마이크로서비스 참조  - <http://microservices.io>
 
 
+
+## 프론트엔드앱 개발 환경 구축하기
+
+Eclipse version 4.1.0을 활용하여 개발을 진행한다. 
+
+
+
+###  개발 요구사항
+
+\-       AngularJS 1.0
+
+\-       Java 1.8
+
+\-       Spring Boot 1.5.9
+
+\-       Spring Cloud 1.6.1
+
+\-       swagger API 2.0
 
  
 
- 
+### SampleApp 프로젝트 생성[eclipse]
+
+여기에서는 eclipse 4.10 버전을 이용하여 프로젝트 생성하는 방법을 설명한다. Eclipse에서 java project를 생성하고 JavaSE-1.8을 적용한다. 
+
+![1557207618773](C:\Users\crosshan\AppData\Roaming\Typora\typora-user-images\1557207618773.png)
+
+개발 환경 구축 시 JAVA 이외에도 Spring Boot, Spring cloud 등 dependency 정의 부분을 [pom.xml]()에 정의한다.
+
+eclipse 소스코드 폴더 구조는 아래 그림과 같이 정의한다.  
+
+![1557208120838](C:\Users\crosshan\AppData\Roaming\Typora\typora-user-images\1557208120838.png)
+
+첫번째로 [pom.xml]()에 필수 체크 부분을 반드시 확인한다. [pom.xml]()에 정의할 내용을 마이크로서비스 스튜디오 사이트의 DOCS 메뉴를 통해서도 확인이 가능하다.
+
+![1557208896699](C:\Users\crosshan\AppData\Roaming\Typora\typora-user-images\1557208896699.png)
+
+​                                                  
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.crossent.microservice</groupId>
+    <artifactId>front</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <name>front</name>
+    <description>Demo project for Spring Boot</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.3.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-cloud-connectors</artifactId>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>io.pivotal.spring.cloud</groupId>
+            <artifactId>spring-cloud-services-cloudfoundry-connector</artifactId>
+            <version>1.6.1.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>io.pivotal.spring.cloud</groupId>
+            <artifactId>spring-cloud-services-spring-connector</artifactId>
+            <version>1.6.1.RELEASE</version>
+        </dependency>
+
+        <!-- Json -->
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- webjars -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>angularjs</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>angular-ui</artifactId>
+            <version>0.4.0-2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery-ui</artifactId>
+            <version>1.11.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.5</version>
+        </dependency>
+        <!-- end of webjars -->
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
+```
+
+
