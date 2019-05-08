@@ -193,7 +193,7 @@ Eclipse version 4.1.0을 활용하여 개발을 진행한다.
 
 eclipse 소스코드 폴더 구조는 아래 그림과 같이 정의한다.  
 
-![1557212973486](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
 
 
 
