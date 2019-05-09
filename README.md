@@ -1,4 +1,8 @@
-​                                            
+ 
+
+[TOC]
+
+​                                           
 
 
 # 클라우드 기반 창업 플랫폼 개요
@@ -34,7 +38,7 @@
 
 창업 플랫폼의 시스템 구성도는 다음과 같다. 
 
-  ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/susystem.png) 
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/susystem.png)
 
 <창업 플랫폼 시스템 구성도>
 
@@ -44,9 +48,11 @@
 
 - 오픈데이터API 게이트웨이 포털
 
-   웹포털 사이트로 제공하고 있어 별도의 시스템 요구사항이 없다.
+  웹포털 사이트로 제공하고 있어 별도의 시스템 요구사항이 없다.
 
-  []: http://182.252.131.40:3000/	"OPEN DATA GATEWAY PORTAL"
+  [OPEN DATA GATEWAY PORTAL](http://182.252.131.40:3000)
+
+  
 
 - 빅데이터 서비스 브로커, AI기반 상권분석 브로커
 
@@ -79,7 +85,7 @@
   
 
 
-## PaaS-TA 사용하기
+## PaaS-TA 사용
 
  PaaS-TA 는 정부에서 오픈소스 Cloud Foundry를 기반으로 개발한 한국형 개방형 클라우드 플랫폼이다. 2015년 PaaS-TA 1.0출시 이후 2018년 12월에 PaaS-TA 링귀니 버전이 출시되었다. 창업플랫폼에서는 PaaS-TA 3.0(Penne) 기준으로 제공한다. 보다 자세한 내용은 아래 링크를 통해 확인할 수 있다. 
 
