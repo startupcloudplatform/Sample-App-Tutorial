@@ -533,7 +533,7 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
   API 호출 테스트를 실행할 수 있다. 
 
-  ![apitest](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/apitest.png)
+  ![apitest](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/apitest.png)
 
 - Gateway
 
