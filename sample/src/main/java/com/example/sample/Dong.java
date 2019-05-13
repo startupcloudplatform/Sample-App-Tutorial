@@ -5,7 +5,7 @@ public class Dong {
     private Integer alivecnt;
     private Double months;
     private Integer cnt;
-    String dong;
+    private String dong;
     private Double not_alive_ratio;
 
     public Integer getNot_alivecnt() {
