@@ -120,7 +120,7 @@ https://github.com/startupcloudplatform/Sample-App-Tutorial.git
 
 여기에서는 eclipse 4.10 버전을 이용하여 프로젝트 생성하는 방법을 설명한다. Eclipse에서 Maven project를 생성하고 JAVA 1.8을 적용한다. 개발 환경 구축 시  Spring Boot, Spring cloud 등 dependency 필수 정의 부분을 [pom.xml]()에 정의한다. eclipse maven proejct 생성 후 기본 폴더 구조는 아래 그림과 같이 정의된다.  
 
-![](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/eclipse-folder.png)
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
 
 
 
@@ -505,7 +505,7 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
 8. 위의 과정을 통하면 마이크로서비스 구성이 완료된다.
 
-   ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/msa_design.png)
+   ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msa_design.png)
 
 
 
@@ -533,7 +533,7 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
   API 호출 테스트를 실행할 수 있다. 
 
-  ![apitest](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/apitest.png)
+  ![apitest](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/apitest.png)
 
 - Gateway
 
@@ -545,7 +545,7 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
 ​      마이크로서비스로 구성된 앱의 로그 정보를 뷰어롤 통해 제공한다. 동시에 여러개의 앱의 로그를 볼 수도 있다.
 
-![](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/applog.png)
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/applog.png)
 
 
 
@@ -557,7 +557,7 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
 API 공개 구조는 다음과 같다. 
 
-![](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/apisystem.png)
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/apisystem.png)
 
 프론트앤드 앱에 @GetMapping 를 정의한다. 
 
