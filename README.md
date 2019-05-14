@@ -11,7 +11,7 @@
 
 
 
-- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/tutorial.md>)
+- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/Tutorial.md>)
 
   - 샘플 앱 개요
   - PaaS-TA 활용
