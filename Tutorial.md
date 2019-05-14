@@ -120,7 +120,7 @@ https://github.com/startupcloudplatform/Sample-App-Tutorial.git
 
 여기에서는 eclipse 4.10 버전을 이용하여 프로젝트 생성하는 방법을 설명한다. Eclipse에서 Maven project를 생성하고 JAVA 1.8을 적용한다. 개발 환경 구축 시  Spring Boot, Spring cloud 등 dependency 필수 정의 부분을 [pom.xml]()에 정의한다. eclipse maven proejct 생성 후 기본 폴더 구조는 아래 그림과 같이 정의된다.  
 
-![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
+![1557809697710](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
 
 
 
@@ -249,12 +249,12 @@ class SwaggerConfig {
 }
 ```
 
-**@EnableDiscoveryClient**    /* Service Discovery 정의
+**@EnableDiscoveryClient**    /* Service Discovery 정의   */
 
 Eureka 서버가 서비스를 탐색할 때 사용한다. 서비스 검색(Service Discovery)은 마이크로서비스 기반 아키텍처의 핵심 기술요소로  각 클라이언트 또는 일부 형식을 수동으로 구성하는 것은 매우 어려울 수 있다. Eureka는 Netflix 서비스 검색 서버 및 클라이언트로 서버는 등록된 서비스에 대한 상태를 다른 서버로 복제하여 각 서버가 HA(고가용성) 구성 및 배치를 할 수 있다
-Eureka client설정: Eureka Server가 작동하고 있는 상태에서 Eureka client를 시작하면 Eureka Server의 Registry에 등록된다.  @EnableDiscoveryClient을 활성화시킨 상태에서서 RestTemplate Bean 에 @LoadBalanced만 달아주면 모든 설정을 Spring Boot에서  자동으로 해준다..
+Eureka client설정: Eureka Server가 작동하고 있는 상태에서 Eureka client를 시작하면 Eureka Server의 Registry에 등록된다.  @EnableDiscoveryClient을 활성화시킨 상태에서서 RestTemplate Bean 에 @LoadBalanced만 달아주면 모든 설정을 Spring Boot에서  자동으로 해준다.
 
-**@EnableCircuitBreaker**   /* 서비스 부하 차단기 정의
+**@EnableCircuitBreaker**   /* 서비스 부하 차단기 정의    */
 
 Netflix는 Circuit Breaker 패턴을 구현을 위한 Hystrix라는 라이브러리를 만들 수 있다. 마이크로서비스 아키텍처에서는 다음 예제와 같이 여러 개의 서비스 호출 계층을 갖는 것이 일반적이다. 
 
@@ -268,7 +268,7 @@ ex) Hystrix Stream 샘플 예제
 
 **@LoadBalanced**       /* Netflix Ribbon을 자동 적용, 
 
-Service Discovery을 IP대신 찾아서 서비스이름으로 사용할 수 있다. 
+Service Discovery을 IP대신 찾아서 서비스이름으로 사용할 수 있다.  마이크로서비스 환경에서 효과적으로 사용하기 위해서는, @LoadBalanced 어노테이션을 사용해야 한다. 이 annotation으로 인하여, Netflix Ribbon을 자동적으로 사용할 수 있게 되고, 서비스 발견을 IP대신 서비스 이름으로 할 수 있게 된다.
 
 **@EnableSwagger2**    /* swagger API 정의
 
@@ -339,8 +339,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 **@RestController**
 
 REST API는 외부에서 정해진 호출 방식으로 특정 URI를 통해서 사용자가 원하는 정보를 제공하는 방식이다.  REST 방식의 서비스 제공이 가능한 것을 Restful이라고 한다. 
-
-백엔드 앱에서 정의한 API 호출하여 새로운 API를 생성하는 클래스를 생성하였다. 
 
 ```
 @RestController
@@ -487,29 +485,49 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
 #### [마이크로서비스 접속하기]() 
 
+
+
 ### 마이크로서비스 구성 하기
 
-1. 마이크로서비스 스튜디오의 추가 기능을 이용하여 생성한다.
+1. 마이크로서비스 스튜디오를 접속하면 초기 화면은 CATALOG 목록이 기본 페이지이다. 
 
-2. 초기 화면에는 Gateway 아이콘만 화면에 보일 것이다.
+2. 추가 버튼을 이용하여 마이크로서비스를 생성하여 구성한다.
 
-3. 등록된 앱목록에서 앱을 디자인 영역으로 드래그 앤 드롭 기능을 이용하여 배치한다.
+   ![1557810254136](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msamain.png)
 
-4. 프론트앤드 앱과 백엔드앱이 등록되어 있을 것이다.
+3. 생성 화면에서 필수 입력값을 채워서 생성한다. 이때 PaaS-TA에 자신이 권한을 갖고 있는 조직과 영역을 지정해야 한다. 
 
-5. 둘 다 화면에 배치한 후 앱 간의 네트워크 정보는 선으로 연결한다. 선을 연결할 때는 시작하는 앱을 Shift키를 누른 상태로 다른 앱으로 마우스를 이동한다.
+![1557810443245](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msaadd.png)
 
-6. 네트워크 연결 시에는 반드시 순서를 지켜야 하는데 Gateway를 통해 Registry에 등록되기 때문에 프론트앤드 앱과 Gateway를 연결해야 하고 Gateway와 백엔드 앱을 연결해야 한다. 
+1. 초기 화면에는 Gateway 아이콘만 화면에 보일 것이다.
 
-7. 서비스를 연결하는 경우 백엔드 앱을 통해 서비스를 연결해야 한다. 
+#### 드래그 앤 드롭 기능 사용하기(앱 배치)
 
-8. 위의 과정을 통하면 마이크로서비스 구성이 완료된다.
+1. 등록된 앱목록에서 앱을 디자인 영역으로 드래그 앤 드롭 기능을 이용하여 배치한다.
+2. App List을 클릭하면 PaaS-TA를 이용하여 푸시한 앱 목록이 보일 것이다. 프론트엔드 앱과 백엔드 앱이 보일 것이다.
+
+![1557810643268](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msaapplist.png)
+
+1. 둘 다 화면에 배치한 후 앱 간의 네트워크 정보는 선으로 연결한다. 선을 연결할 때는 시작하는 앱을 **Shift키**를 누른 상태로 다른 앱으로 마우스를 이동한다.
+2. 네트워크 연결 시에는 반드시 순서를 지켜야 하는데 Gateway를 통해 Registry에 등록되기 때문에 프론트앤드 앱과 Gateway를 연결해야 하고 Gateway와 백엔드 앱을 연결해야 한다. 
+
+#### 서비스 구성하기
+
+PaaS-TA에 배포된 서비스 브로커는 모두 사용할 수 있다. 창업 플랫폼으로 새로 추가된 빅데이터 서비스 브로커와 AI기반 상권 분석 브로커 등을 이용할 수 있다. 본 샘플 앱에서는 빅데이터 및 AI서비스 브로커를 이용하여 관련된 서비스를 같이 구성해야 한다.
+
+1. 마이크로서비스 구성 화면의 오른쪽 메뉴에서 Service 를 선택한다.
+
+2. 서비스 목록이 조회된다. 앱 구성과 마찬가지로 드로잉 영역으로 해당 되는 서비스를 드래그앤 드롭하여 배치한다.
+
+3. 서비스를 연결하는 경우 백엔드 앱을 통해 서비스를 연결해야 한다. 
+
+4. 위의 과정을 통하면 마이크로서비스 구성이 완료된다.
 
    ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msa_design.png)
 
 
 
-### 마이크로서비스 조회
+### 마이크로서비스 조회 및 수정
 
 생성과정을 통해 마이크로서비스 구성이 완료되었다면 Deploying 까지 완료된 상태이다. 외부에 오픈 가능한 도메인을 사용했다면 웹사이트 URL를 통해 어디에서든지 접속이 가능하다.
 
@@ -549,7 +567,41 @@ PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마
 
 
 
-### API 공개 설정
+#### 마이크로서비스 수정하기
+
+이미 구성을 완료한 경우 수정 화면을 통해서 기존 마이크로서비스 구성 상태를 변경할 수 있다. 상단 메뉴바에서 CATALOG를 선택하고 해당되는 마이크로서비스 목록의 이름을 클릭한다. 
+
+조회화면에서 연필모양 아이콘을 클릭하면 수정화면으로 변경된다.
+
+![1557811325022](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/msaupdate.png)
+
+수정화면에서 앱을 시작, 종료 상태를 변경할 수 있고 현재 페이지의 결과를 완전히 삭제할 수도 있다. 드로잉 영역의 이미지를 확대하거 축소하는 경우(+,-) 아이콘을 이용한다. 
+
+
+
+### REST API 테스트 기능 활용 하기
+
+튜토리얼에서 소개하는 샘플앱은 프론트엔드 앱과 백엔드 앱 두개로 구성되어 있다. 백엔드 앱에는사용한 빅데이터 서비스 브로커를 이용하여 창업지역API 를 호출할 수 있게 개발되었고 프론트엔드 앱에서는 오픈된 API를 호출하여 프론트 영역에 사용자가 원하는 정보를 호출하도록 개발되었다. 개발하면서 정의한 API 목록을 swagger API로 조회하고 테스트해볼 수 있는 기능을 제공한다. 
+
+
+
+### 외부 API 활용
+
+마이크로서비스 추가화면에서 외부 api 추가하는 기능을 사용할 수 있다. 이 샘플앱에서는 외부 API를 활용하지 않았지만 개발 범위 내에 외부 API를 활용할 필요가 있다면 아래와 같은 절차를 이용하면 외부 API를 활용할 수 있다. 
+
+1. 마이크로서비스 추가 화면 또는 수정화면을 이용한다.
+2. 오른쪽 메뉴에서 API 메뉴을 선택한다. 
+3. 사용 가능한 API 목록이 조회된다. 
+4. 사용할 API 오른쪽 옆에 + 버튼을 누르면 API를 사용할 수 있는데 접속할 계정을 등록해야 한다. 
+5. 여기에서의 계정은 사용자가 추가한 API를 접속할 때 이용하는 계정 정보이다. 유출되지 않도록 해야 하고 잊어버리지 않도록 주의하자.
+
+![1557812323113](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/bauth.png)
+
+6. 아이콘을 누르면 API 목록과 상세 정보를 조회할 수 있다.
+
+   
+
+### API 관리 
 
 마이크로서비스 기반으로 개발된 앱을 다른 사용자에게 공유를 위해 공개 설정을 할 수 있다. 공개 설정은 프론트엔드 앱에 정의한 API 설정 정보 기반으로 공개된다. 프론트엔드 앱에 백엔드 앱 호출 API를 정의해야 한다. 
 
@@ -563,11 +615,37 @@ API 공개 구조는 다음과 같다.
 
 ```
 @GetMapping("/api/sido")
-    public @ResponseBody
+public @ResponseBody
+.....
 ```
 
 ```
 @GetMapping("/api/sangho")
-    public @ResponseBody
+public @ResponseBody
+.....
 ```
+
+위와 같이 개발 소스코드를 정의하게 되면 API 등록 시 위의 정보를 호출하게 된다. 
+
+
+
+#### API 등록(공개)--관리자 메뉴
+
+자신이 등록한 마이크로서비스에 위에서 설명한 API 공개를 위한 조건에 부합이 된다면 API 등록을 통해 다른 사용자에게도 API를 공개할 수 있다. 아래 과정을 통해 API를 등록하면 다른 사용자에게 API목록이 조회된다. 
+
+1. 마이크로서비스 상단 메뉴의 오른쪽에 환경설정 아이콘을 클릭하면 마이크로서비스 API관리 메뉴가 있다. 
+2. 이 메뉴을 선택하면 등록된 API 목록 화면이 나오고 등록버튼을 볼 수 있다. 
+3. 등록 버튼을 눌러서 등록할 API가 있는 앱이 배포된 조직을 선택한다. 
+4. 다음 버튼을 누르면 공개할 API의 세부 정보를 등록할 수 있다. 
+   ![1557813404373](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/addapi.png)
+5. 필수입력값을 잘 확인하여 값을 입력한다. 
+6. 마이크로서비스 Frontend 부분에서 URL 부분의 리스트를 선택한다. 이 리스트에 나오는 값은 마이크로서비스 구성 시 Frontend App 의 URL을 자동으로 가져온다. 
+   ![1557813500584](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/fronturl.png)
+7. 해당 URL을 선택한다.
+8. 등록 버튼이 활성화되면 클릭한다.
+9. 등록된 결과는 상단 메뉴의 API을 통해 확인할 수 있다.
+
+
+
+
 
