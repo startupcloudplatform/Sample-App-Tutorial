@@ -1,38 +1,51 @@
 # Tutorial
 
- 창업 플랫폼에서 제공하는 다양한 SW개발에 필요한 서비스를 이용한 앱을 개발하는 과정을 설명하는 문서이다. 이 튜토리얼을 좀 더 잘 활용하기 위해서는 사전에 PaaS-TA을 사용해봤거나 교육 과정을 이수하는 것이 도움이 된다. 
+ 
 
-이 튜토리얼의 구성은 다음과 같다.
+## 개요
 
-- ### [샘플 앱 개요](#샘플-앱-개요)
-- PaaS-TA 사용
-- eclipse 활용 개발 환경 구축
-- 마이크로서비스 개발 가이드
-- 백엔드 앱 개발
-- 프론트엔드 앱 개발
-- 마이크로서비스 구성
-- API 공개
-- 샘플 앱 배포 및 운영
-
-
+창업 플랫폼에서 제공하는 SW개발에 필요한 서비스를 쉽게 활용할 수 있도록 제공하는 서비스를 이용하여 개발을 진행하는 과정을 튜토리얼 형태로 제공하는 문서이다. 이 튜토리얼은 창업 플랫폼을 잘 활용할 수 있도록 하기 위해 샘플로 개발된 앱 소스와 관련 메뉴얼을 포함하고 있다. 창업 플랫폼의 일부 서비스는 PaaS-TA상에서 동작하므로 PaaS-TA를 처음 접한다면 교육을 이수하는 것이 도움이 된다.  
 
 창업 플랫폼에서는 각 기 다른 특성을 갖고 있는 서비스를 제공하기 때문에 개발하고자 하는 앱에 따라 선택적으로 사용할 수 있다. 
 
 - 오픈데이터API 게이트웨이 시스템은 포털 사이트로 제공하기 때문에 반드시 PaaS-TA 기반일 필요는 없다. 
-
 - 빅데이터 서비스 브로커, AI기반 상권분석 브로커는 개발 아이디어에 관련 분야의 기술을 적용할 필요가 있는 경우 유용하다. PaaS-TA 3.0 기반으로 제공하기 때문에 PaaS-TA 상에서 개발해야 한다. 
+- 마이크로서비스 스튜디오의 경우에도 위에 언급한 두가지 서비스와 종속성은 없지만 마이크로서비스 기반 개발을 PaaS-TA상에서 개발하는 경우 사용한다. 이때, 빅데이터 서비스 브로커와 연동하여 사용이 가능하다. 
 
-- 마이크로서비스 스튜디오의 경우에도 위에 언급한 두가지 서비스와 무관하게 PaaS-TA 상에서 개발하는 개발자가 마이크로서비스 기반으로 개발을 하는 경우에 사용이 가능하다. 
+
+
+### 문서 구성
+
+- #### [샘플 앱 개요](#샘플-앱-개요])
+
+- #### [샘플앱 프로젝트 시작하기](#샘플앱-프로젝트-시작하기)
+
+  - 백엔드 앱 개발
+  - 프론트엔드 앱 개발
+
+- #### [PaaS-TA 상에 앱 배포하기](#PaaS-TA-상에-앱-배포하기)
+
+- #### [마이크로서비스 앱 구성](#마이크로서비스-앱-구성)
+
+- #### [API 관리](#API-관리)
 
  
 
-## 샘플 앱 개요
+### 참고 문서
+
+- 오픈데이터API 게이트웨이 시스템
+- 빅데이터 및 AI기반 상권 분석 브로커
+- 마이크로서비스 스튜디오
+
+
+
+## 2. 샘플 앱 개요
 
 클라우드 기반 창업 플랫폼을 활용하여 샘플로 제작된 앱으로 오픈데이터API 게이트웨이 포털과 빅데이터 서비스 브로커, AI기반 상권 분석 브로커 및 마이크로서비스 기반 개발 기능을 활용하여 개발되었다. 
 
 이 사이트에서는 업종별 창업하기에 적합한 지역을 찾아주는 웹사이트로 자영업 예비창업자가 주 이용자이다. 업종 정보[치킨, 분식, 카페 등]를 제공하고 원하는 지역의 상권정보를 제공해준다. 이 사이트의 핵심 기능은 소상공인진흥공단에서 오픈한 상권API를 활용하여 이용자에게 최적의 정보 제공을 위한 빅데이터 서비스와 AI기반 상권분석 서비스를 연동하여 개발한다.  또한, 마이크로서비스 기반으로 개발하여 빠르게 제공할 서비스는 우선 개발하고 향 후에 추가할 서비스가 쉽게 확장할 수 있도록 한다. 
 
- *[본 샘플 앱 프로젝트는 마이크로서비스 기반으로 개발을 위해 앱을 여러개로 분할하여 개발을 수행한다. 여기에서는 프론트엔드앱과 백엔드앱 각각 1개씩 개별 개발하여 구축하는 순서로 설명한다]*
+ *[본 샘플 앱 프로젝트는 마이크로서비스 기반 개발을 위해 주요 기능을 분할하여 각각의 앱으로  개발을 수행한다.  여기에서는 프론트엔드앱과 백엔드앱 각각 1개씩 개별 개발하여 구축하는 순서로 설명한다.]*
 
 
 
@@ -68,6 +81,26 @@
 
 
 
+### 창업 플랫폼 활용 마이크로서비스 앱 개발 프로세스
+
+마이크로서비스 기반 개발을 위한 다양한 방법이 존재하지만 창업 플랫폼에서 제공하는 마이크로서비스를 활용하려면 적용 프로세스을 이해하고 적용되어야 한다.  
+
+1. 마이크로서비스 단위로 앱 분할. 기본적인 마이크로서비스 단위 분할 패턴을 적용하여 분할한다. 본 튜토리얼의 연관 문서로 제공하는 '마이크로서비스 개요' 부분을 참조한다. [마이크로서비스 개요](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/microservice.md)]
+2. 서비스 브로커 활용 개발인 경우 PaaS-TA 로그인 후 서비스 인스턴스를 생성한 후 서비스 인스턴스 접속정보를 확인한다. [[서비스 인스턴스 생성](#빅데이터-서비스-인스턴스-생성)]
+3. 자체 IDE 활용하거나 eclipse 을 이용하는 경우 PaaS-TA에서 plugin을 제공하고 있으니 환경을 설정하여 준비한다. eclipse plugin 설치 방법은 PaaS-TA 3.5 가이드를 참조한다. [[Open PaaS 개발환경 사용가이드](https://guide.paas-ta.kr/guide-1.0-spaghetti/use-guide/open-paas)]
+4. 코딩
+   - 마이크로서비스 개발 가이드(Microservice Studio 페이지의 DocS 메뉴 참조)를 참조하여 필수 체크 항목 및  추가되는 내용을 적용한다. 만약 가이드를 따르지 않으면 마이크로서비스 앱 간의 연동된 부분(API 등)의 정보를 정확하게 가져오지 못한다. 
+   - 마이크로서비스 앱 간의 API 연동이 필수이므로 각 각 앱에 적용할 API를 위한 필수 체크 항목을 반드시 적용한다.
+5. PaaS-TA에 개발된 앱을 마이크로서비스 단위별로 각각 PUSH한다.  PUSH 과정에서 msa 환경변수를 정의하거나 PUSH완료 후에도 환경변수 변경은 가능하다. 앱 PUSH 방법은 아래 세가지를 제공한다.
+   1. PaaS-TA 포털을 통한 앱 PUSH
+   2. CF CLI을 통한 앱 PUSH --> 재배포 시에는 반드시 CF CLI을 이용해야 한다.
+   3. eclipse Plugin을 통한 eclipse에서 Open PaaS 서버를 연동한 push --> 재배포 가능
+6. 환경변수 msa = true 를 추가한다. (PUSH  진행 중 또는 PUSH 후)
+7. 마이크로서비스 스튜디오 페이지 접속 --> PaaS-TA 로그인 계정과 동일
+8. 마이크로서비스 스튜디오를 통해 마이크로서비스를 추가한다. 
+9. PaaS-TA에 PUSH된 앱 목록과 PaaS-TA에 등록된 서비스를 활용하여 마이크로서비스를 구성한다.
+10. API 공개는 선택적 기능으로 개발이 완료된 마이크로서비스를 다른 사용자에게 공개하고자 하는 경우에 사용한다.[마이크로서비스 사용자 가이드](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/microserviceuser.md]
+
 ### 마이크로서비스 기반 개발
 
 마이크로서비스 기반으로 개발을 위해 제공하는 서비스를 비지니스 영역, 데이터베이스 종속성 등을 고려하여 분할한다. 여기에서는 향후 확장할 서비스를 포함하여 총 4개의 앱으로 분할하여 개발한다고 간주한다.
@@ -78,9 +111,9 @@
 
 
 
-## 샘플 앱 프로젝트 
+## 프론트엔드 앱 개발
 
-본 튜토리얼에서는 eclipse 4.10.0을 기준으로 작성되었다. PaaS-TA 에서도 WEB IDE를 제공하고 있으며 활용이 가능하다. 
+본 튜토리얼은 eclipse 4.10.0을 기준으로 작성되었으며 PaaS-TA 에서도 WEB IDE를 제공하고 있으며 활용이 가능하다. 다른 익숙한 IDE를 활용해도 무방하다.
 
 
 
@@ -94,39 +127,61 @@
 | Spring Cloud | 1.6.1 |
 | swagger API  | 2.0.0 |
 
-- Service Broker (창업플랫폼의 PaaS-TA에서 제공함)
+- ###### Open API 게이트웨이 시스템(<http://182.252.131.40:3000/>)
 
-​       ankus service broker 
+​       소상공인진흥공단 - 상권정보API
 
-- Open PaaS 
+- ###### Service Broker (창업플랫폼의 PaaS-TA에서 제공함)
 
-​      PaaS-TA 3.0(Penne)
+​       빅데이터 & AI기반상권분석 브로커(ankus service broker) 
 
- https://guide.paas-ta.kr/guide-3.5-penne
+- ###### Open PaaS 
+
+​      PaaS-TA 3.1, 3.5(Penne)
+
+​       https://guide.paas-ta.kr/guide-3.5-penne
 
  
 
-### 튜토리얼 실행 소스 코드
+### 소스 코드 준비
 
-샘플앱은 Frontend 는 AngularJS 1을 사용하였고 Backend 앱의 API 호출 부분은 JAVA를 이용하였다. 버전은 개발 요구사항에 언급된 내용을 확인하고 구축한다. 
+샘플앱의 Frontend 는 AngularJS 1을 사용하였고 Backend 앱의 API 호출 부분은 JAVA를 이용하였다. Backend 는 Java 로 개발되었고 ankus service broker를 활용했기 때문에 개발 요구사항에 언급된 버전 등을 확인하고 구축한다. 현재 제공하는 튜토리얼이 있는 Git 저장소에 각각의 폴더에 소스코드를 제공한다.
 
-Github에 공개된 소스코드를 로컬에 내려 받고 eclipse 에서 프로젝트 생성 시 기존 폴더를 오픈하여 생성한다. 
+##### 소스코드 다운로드 : https://github.com/startupcloudplatform/Sample-App-Tutorial.git
 
-https://github.com/startupcloudplatform/Sample-App-Tutorial.git
+소스 코드 경로에서 Git 주소를 복사한 후 Git clone을 이용하여 로컬에 Git Repository를 생성한다. 
+
+### eclipse IDE 환경 구성
+
+여기에서는 eclipse 4.10 버전을 이용하여 프로젝트 생성하는 방법을 설명한다. Eclipse에서 Maven project를 생성하고 JAVA 1.8을 적용한다.  
+
+eclipse IDE에서 프로젝트를 직접 생성하려면 Project Explorer에서 마우스 우클릭 후 New > Project.. 을 선택한다. Maven Project을 선택하면 기본 Maven 환경이 구성된다. (사전에 Maven 설치가 완료되어 있어야 한다.)
+
+Maven Project 생성 시 
+
+- GroupId : com.example.sample 로 등록한다.
+- ArtifactId : frontend
+- Package : com.example.sample 로 등록한다. 
+
+src/main/java와 src/test/java 가 생성된다. UI 소스코드를 위한 폴더는 src/main/resources 폴더 아래에 구성한다. (Git Repository 폴더 구조 참조)
+
+![1557993650144](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/resources.png)
+
+개발 환경 구축 시  Spring Boot, Spring cloud 등 dependency 필수 정의 부분을 [pom.xml]()에 정의한다. eclipse maven proejct 생성 후 기본 폴더 구조는 아래 그림과 같이 정의된다.  
+
+![1557991351814](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse.png)
 
 
 
-### 프론트앤드 앱 개발[eclipse 이용]
+*주의사항 : 만약 PaaS-TA 서버와 연동하여 환경을 구성한다면 Project > Properties > Project Facets 을 선택하고  Cloud Foundry Standalone Application 을 체크한다.* 
 
-여기에서는 eclipse 4.10 버전을 이용하여 프로젝트 생성하는 방법을 설명한다. Eclipse에서 Maven project를 생성하고 JAVA 1.8을 적용한다. 개발 환경 구축 시  Spring Boot, Spring cloud 등 dependency 필수 정의 부분을 [pom.xml]()에 정의한다. eclipse maven proejct 생성 후 기본 폴더 구조는 아래 그림과 같이 정의된다.  
-
-![1557809697710](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse-folder.png)
+ ![1557991828536](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/cfapp.png)
 
 
 
-#### 마이크로서비스 앱 개발 필수 항목 정의
+### Java 필수 항목 코딩
 
-마이크로서비스 앱 개발은 여러 개의 앱을 구성하여 구동하는 방식으로 개발 환경 설정 시 여러 필수 체크 부분이 존재한다. 특히, JAVA Spring cloud 기반 코딩을 위한 dependency를 정의한다.
+마이크로서비스 앱 개발은 여러 개의 앱을 구성하여 구동하는 방식으로 개발 환경 설정 시 여러 필수 체크 부분이 존재한다. 특히, JAVA Spring cloud 기반 코딩을 위한 dependency를 정의한다. 기본으로 pom.xml 파일이 생성되었을 것이다. 이 파일을 오픈하고 아래 내용을 붙여넣기 한다.
 
 ##### pom.xml 파일 수정
 
@@ -197,9 +252,9 @@ java spring cloud 기반 코딩을 위한 필수 dependency 정의를 위해 아
 
 
 
-##### java 파일에 annotation 정의
+#####  annotation 정의를 위한 Java 클래스 생성
 
-java 프로젝트 생성 후 디폴트로 생성된 App.java 파일에 annotation을 정의한다. annotation은 java spring cloud 의 eureka 기능 사용과 rest api 명세를 위한 swagger 필수 annotation 이다. App.java의 기존 내용을 모두 삭제하고 아래 내용을 복사하여 붙여넣기 한다. 
+java 프로젝트 생성 후 디폴트로 생성된 App.java 파일에 annotation을 정의한다. annotation은 java spring cloud 의 eureka 기능 사용과 rest api 명세를 위한 swagger 필수 annotation 이다. App.java의 기존 내용을 모두 삭제하고 아래 내용을 복사하여 붙여넣기 한다. (소스코드로 배포한 파일에는 클래스이름이 SampleApplication.java로 되어 있음.)
 
 @EnableDiscoveryClient, @EnableCircuitBreaker, @EnableSwagger2
 
@@ -249,12 +304,12 @@ class SwaggerConfig {
 }
 ```
 
-**@EnableDiscoveryClient**    /* Service Discovery 정의   */
+**@EnableDiscoveryClient**    // Service Discovery 정의   
 
 Eureka 서버가 서비스를 탐색할 때 사용한다. 서비스 검색(Service Discovery)은 마이크로서비스 기반 아키텍처의 핵심 기술요소로  각 클라이언트 또는 일부 형식을 수동으로 구성하는 것은 매우 어려울 수 있다. Eureka는 Netflix 서비스 검색 서버 및 클라이언트로 서버는 등록된 서비스에 대한 상태를 다른 서버로 복제하여 각 서버가 HA(고가용성) 구성 및 배치를 할 수 있다
 Eureka client설정: Eureka Server가 작동하고 있는 상태에서 Eureka client를 시작하면 Eureka Server의 Registry에 등록된다.  @EnableDiscoveryClient을 활성화시킨 상태에서서 RestTemplate Bean 에 @LoadBalanced만 달아주면 모든 설정을 Spring Boot에서  자동으로 해준다.
 
-**@EnableCircuitBreaker**   /* 서비스 부하 차단기 정의    */
+**@EnableCircuitBreaker**   // 서비스 부하 차단기 정의    
 
 Netflix는 Circuit Breaker 패턴을 구현을 위한 Hystrix라는 라이브러리를 만들 수 있다. 마이크로서비스 아키텍처에서는 다음 예제와 같이 여러 개의 서비스 호출 계층을 갖는 것이 일반적이다. 
 
@@ -266,11 +321,11 @@ ex) Hystrix Stream 샘플 예제
 
 
 
-**@LoadBalanced**       /* Netflix Ribbon을 자동 적용, 
+**@LoadBalanced**       // Netflix Ribbon을 자동 적용, 
 
 Service Discovery을 IP대신 찾아서 서비스이름으로 사용할 수 있다.  마이크로서비스 환경에서 효과적으로 사용하기 위해서는, @LoadBalanced 어노테이션을 사용해야 한다. 이 annotation으로 인하여, Netflix Ribbon을 자동적으로 사용할 수 있게 되고, 서비스 발견을 IP대신 서비스 이름으로 할 수 있게 된다.
 
-**@EnableSwagger2**    /* swagger API 정의
+**@EnableSwagger2**    // swagger API 정의
 
 Swagger2는 RESTful 웹 서비스 용 REST API 문서를 생성하기 위해 사용되는 오픈 소스 프로젝트이다. 웹 브라우저를 통해 RESTful 웹 서비스에 액세스 할 수 있는 사용자 인터페이스를 제공한다. Spring Boot 애플리케이션에서 Swagger2를 사용하려면 dependency을 추가해야 한다. 앞에서 설명한 pom.xml 에 추가한다. 
 
@@ -364,7 +419,7 @@ public class TestCntroller {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.add("Authorization", String.format("Basic %s", base64Auth));
-//        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
+        postConstruct();
         return headers;
     }
  }
@@ -372,9 +427,17 @@ public class TestCntroller {
 
 
 
-## PaaS-TA 앱 PUSH
+마이크로서비스 기반 개발을 위한 해당되는 클래스, pom.xml, application.properties 등의 기본적인 정의가 완료되었다면 나머지 코딩은 개발자가 원하는 내용에 따라 달라질 수 있어 본 문서에서는 샘플앱에 포함된 다른 클래스에 대한 설명은 생략한다. 
 
-코딩이 완료된 소스를 Maven Build를 이용하여 *.jar를 생성한다. 생성된 *.jar 파일을 PaaS-TA에 push한다. PaaS-TA를 이용할 수 있는 환경에서는 포털사이트를 통해서도 앱 push가 가능하다. 여기에서는 Cloud Foundry Cli를 통해서 Push 하는 방법을 설명한다. *PaaS-TA 사용자가이드 참조*
+필수 정의항목과 나머지 코딩이 완료되면 PaaS-TA 서버와 연동하여 앱을 배포하거나 개별로 빌드를 수행한 후 빌드된 파일을 이용하여 PaaS-TA 에 배포해도 된다. 
+
+
+
+## PaaS-TA 에 앱 배포하기
+
+코딩이 완료된 소스를 Maven Build를 이용하여 *.jar를 생성한다. 생성된 *.jar 파일을 PaaS-TA에 push한다. PaaS-TA를 이용할 수 있는 환경에서는 포털사이트를 통해서도 앱 push가 가능하다. 여기에서는 Cloud Foundry Cli를 통해서 Push 하는 방법을 설명한다.
+
+ *[PaaS-TA 사용자가이드 참조](https://guide.paas-ta.kr/guide-3.5-penne)*
 
 #### PaaS-TA 포털 로그인
 
@@ -443,7 +506,7 @@ manifest.yml 파일에 정의된 사용자정의 환경변수가 정의되어 �
 $ cf env startup
 ```
 
-결과
+결과 예시
 
 ```
 {
@@ -477,7 +540,51 @@ msa: true
 
 
 
-## 마이크로서비스 스튜디오
+## 빅데이터 서비스 인스턴스 생성
+
+샘플 앱의 경우 빅데이터 및 AI기반 상권분석 브로커를 이용하여 특정 지역의 상권 정보를 분석하여 원하는 결과를 가공하여 보여주는 기능 개발이 필요한다. 백엔드 앱 개발 시 PaaS-TA에서 제공하는 서비스 브로커를 개발 시 적용한다. 
+
+### 서비스 인스턴스 생성
+
+PaaS-TA에서 제공하는 서비스 목록을 확인 한 후 ankus service가 있는지 확인한다.
+
+서비스가 존재하지 않는다면 운영자에게 서비스를 신청한다. [[신청하기]]()
+
+1. 포털의 대시보드 페이지의 서비스 탭을 선택하여 +가 포함된 사각형 박스를 선택하거나 카달로그 메뉴를 선택하고 왼쪽 메뉴바에서 서비스를 선택한다. 서비스 인스턴스 생성이 가능한 목록이 이미지형으로 보일 것이다.  
+
+2. ankus를 선택한다. 
+
+3. 서비스 인스턴스를 생성하는 화면이 호출된다.  
+
+4. 서비스 인스턴스를 위치할 org(조직)과 space(영역)을 선택한다. 앱이 이미 배포된 경우에는 앱 바인딩을 할 수 있다. 
+
+5. 서비스 인스턴스 이름을 입력한다. 
+
+6. 서비스 플랜을 선택하고 생성 버튼을 누른다. 
+
+   ![1557986460410](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/bigdatainstance.png)
+
+7. 인스턴스가 생성이 되면 대시보드 페이지의 서비스 탭에 인스턴스가 추가된다. 
+
+   ![1557986659585](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/serviceinstance.png)
+
+
+
+### 앱 바인딩 하기
+
+앱 개발 시 서비스를 활용하려면 생성된 인스턴스를 바인딩해야 한다. 푸시된 앱의 상세 페이지를 통해서 앱을 바인딩 할 수 있다. (서비스 인스턴스 생성하는 단계에서도 가능하다.)
+
+1. 앱 상세 페이지을 열고 서비스 부분에서 서비스 등록 버튼을 선택한다. 만약 이미 하나라도 다른 서비스가 등록되어 있다면 서비스 등록 버튼이 보이지 않고 서비스 레이어의 상단에 확장아이콘을 누르면 상세내용이 조회된다.
+2. +서비스 연결 버튼을 선택한다. 리스트에 서비스 목록이 조회된다.
+3.  위에서 생성한 'bigdata'를 선택한다. 
+   ![1557987175728](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/appbinding.png)
+4. 연결 버튼을 누른다.
+5. ''서비스가 연결되었습니다.'' 메시지창과 App을 재시작한다는 메시지가 나타난다. 재시작을 실행한다. 
+6. Credentials을 통해 접속정보를 확인한다.
+
+
+
+## 마이크로서비스 앱 구성
 
 PaaS-TA에 push된 앱은 마이크로서비스 스튜디오를 이용하여 마이크로서비스를 구성한다. 마이크로서비스 구성을 위해 개발된 프론트앤드 앱, 백엔드 앱 모두 PaaS-TA에 push되어 있어야 한다. 
 
@@ -601,7 +708,7 @@ PaaS-TA에 배포된 서비스 브로커는 모두 사용할 수 있다. 창업 
 
    
 
-### API 관리 
+## API 관리 
 
 마이크로서비스 기반으로 개발된 앱을 다른 사용자에게 공유를 위해 공개 설정을 할 수 있다. 공개 설정은 프론트엔드 앱에 정의한 API 설정 정보 기반으로 공개된다. 프론트엔드 앱에 백엔드 앱 호출 API를 정의해야 한다. 
 
@@ -611,7 +718,15 @@ API 공개 구조는 다음과 같다.
 
 ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/apisystem.png)
 
-프론트앤드 앱에 @GetMapping 를 정의한다. 
+### 다른 앱에 정의된 API 호출
+
+다른 앱에서 정의한 API를 활용하여 개발 시 포함할 때는 API경로에 유의해야 한다. 본 튜토리얼에서 소개하고 있는 샘플 앱의 경우 주요 기능을 수행하는 API는 백엔드 앱에 정의되어 있다. 프론트엔드 앱에서 백엔드 앱의 API를 호출은 게이트웨이를 통해서 호출이 가능하기 때문에 게이트웨이 경로를 알고 있어야 한다. 
+
+#### 게이트웨이 경로
+
+게이트웨이 경로는 호출하고자 하는 앱이 마이크로서비스 스튜디오에 이미 구성되어 있어야 한다. 앱배포와 구성을 진행하면 자동으로 게이트웨이가 생성될 것이다. 마이크로서비스 스튜디오에서 마이크로서비스 상세 페이지의 오른쪽 메뉴에서 Registry 메뉴를 선택한다. 등록된 게이트웨이를 확인할 수 있다. 
+
+프론트엔드 앱에 @GetMapping("api/sido")를 통해 백엔드 앱으로 부터 데이터를 받아온다.
 
 ```
 @GetMapping("/api/sido")
@@ -629,7 +744,7 @@ public @ResponseBody
 
 
 
-#### API 등록(공개)--관리자 메뉴
+#### API 등록--관리자 메뉴
 
 자신이 등록한 마이크로서비스에 위에서 설명한 API 공개를 위한 조건에 부합이 된다면 API 등록을 통해 다른 사용자에게도 API를 공개할 수 있다. 아래 과정을 통해 API를 등록하면 다른 사용자에게 API목록이 조회된다. 
 
@@ -647,5 +762,42 @@ public @ResponseBody
 
 
 
+## 마이크로서비스 운영
 
+샘플앱을 기준으로는 프론트엔드 앱과 백엔드 앱 두개의 앱을 실제 배포된 서비스의 운영은 PaaS-TA 상에서 가능하다. PaaS-TA에서 제공하는 운영 서버의 앱 상태를 관리하는 것이다. 마이크로서비스 스튜디오에서는 운영서버에 배포된 각각의 앱과 앱 간의 관계를 정의한 게이트웨이, 서비스 디스커버리를 위한 레지스트리 등의 정보에 장애가 발생하면 앱 상태를 정상과 다른 색상의 앱으로 표시된다. 
+
+앱 상태에 따라 서비스를 재시작하거나 중지는 마이크로서비스에서 운영이 가능하다. 앱이 변경되어 재배포를 실행하려면 PaaS-TA에서 제공하는 기존 앱의 재배포 기능을 사용하거나 CF CLI을 이용하여 앱을 변경된 파일을 재배포할 수 있다. 마찬가지로, eclipse를 이용하는 경우에도 변경된 소스 기반으로 Open PaaS 서버에 재배포를 실행한다. 
+
+### 앱 재배포
+
+- #### eclipse 에서 재배포
+
+  eclipse 를 이용하여 기존 앱을 재배포하려면 Open PaaS 서버에 이미 등록되어 있는 앱을 삭제하지 말고 실행해야 한다. Open PaaS 서버를 eclipse와 연동하게 되면 서버의 앱과 실행하는 단계에서 현재상태와 동기화되기 때문에 기존에 배포된 앱을 실제 삭제하는 경우를 제외하고는 Remove.. 하지 않도록 주의한다.
+
+- #### 재배포 방법
+
+  eclipse의 Servers탭을 선택하고 Open PaaS라고 되어 있는 서버를 선택한다. Open PaaS 서버에서 실행되는 앱 목록을 확인할 수 있다. 소스코드 변경이 완료되었다면 해당 앱을 선택하고 마우스 우클릭하면 배포라는 메뉴가 보일 것이다. 이 메뉴를 실행한다. 
+
+  ![1557896286937](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/eclipse_deploy.png)
+
+
+
+### PaaS-TA 포털을 이용한 운영
+
+PaaS-TA 사용자 포털을 이용하면 자신이 PaaS-TA에 배포한 앱과 마이크로서비스로 구성하면서 생성된 앱을 모두 조회할 수 있다. PaaS-TA 기반의 마이크로서비스 구성 시 필수로 생성된 Registry, Gateway, Gateway 앱 현황을 확인할 수 있다. 자신이 배포한 앱과 마이크로서비스에서 자동으로 생성된 앱 구분은 앱 이름으로 구분된다. 
+
+#### 마이크로서비스에서 자동으로 생성된 앱
+
+- Registry : registryapp + 'guid' 
+- Config : configapp + 'guid'
+- Gateway : gatewayapp + 'guid'
+
+사용자가 생성한 앱과 같이 운영 관리 대상이 되므로 임의로 삭제하거나 이름을 변경하는 경우 마이크로서비스 앱이 정상적으로 동작하지 않을 수 있다. 
+
+#### 마이크로서비스에서 자동으로 생성된 서비스 
+
+- Registry Server : registry-server로 명명되어 있고 registry 관리하는 서비스 
+- Config Server : config-server로 명명되어 있고 configuration을 관리하는 서비스
+
+포털 화면의 대시보드 페이지에서 서비스 탭을 눌러서 확인할 수 있다. 
 
