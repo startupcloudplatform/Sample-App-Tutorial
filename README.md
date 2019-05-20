@@ -7,18 +7,22 @@
   - [SW개발 지원 서비스](#SW개발-지원-서비스)
   - [시스템 구성도](#시스템-구성도)
   - [연관 문서](#연관-문서)
-  - [PaaS-TA 사용](#PaaS-TA-사용)
+  - [PaaS-TA 기반](#PaaS-TA-기반)
 
+- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/README.md>)
 
+  - ##### 샘플 앱 개요
 
-- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/Tutorial.md>)
+  - ##### 샘플앱 프로젝트 시작하기
 
-  - 샘플 앱 개요
-  - PaaS-TA 활용
-  - 백엔드 앱 개발
-  - 프론트앤드 앱 개발
-  - 마이크로서비스 구성
-  - API 공개
+    - 백엔드 앱 개발
+    - 프론트엔드 앱 개발
+
+  - ##### PaaS-TA 상에 앱 배포하기
+
+  - ##### 마이크로서비스 앱 구성
+
+  - ##### API 관리 
 
 - ### [PaaS-TA 활용](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/paasta.md>)
 
@@ -108,7 +112,7 @@
   
 
 
-## PaaS-TA 사용
+## PaaS-TA 기반
 
  PaaS-TA 는 정부에서 오픈소스 Cloud Foundry를 기반으로 개발한 한국형 개방형 클라우드 플랫폼이다. 2015년 PaaS-TA 1.0출시 이후 2018년 12월에 PaaS-TA 링귀니 버전이 출시되었다. 창업플랫폼에서는 PaaS-TA 3.0(Penne) 기준으로 제공한다. 보다 자세한 내용은 아래 링크를 통해 확인할 수 있다. 
 
