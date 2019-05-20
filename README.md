@@ -9,7 +9,7 @@
   - [연관 문서](#연관-문서)
   - [PaaS-TA 기반](#PaaS-TA-기반)
 
-- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/README.md>)
+- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/tutorial.md>)
 
   - 샘플 앱 개요
   - 샘플앱 프로젝트 시작하기
