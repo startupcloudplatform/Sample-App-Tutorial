@@ -54,7 +54,10 @@ public class TestController {
         System.out.println("request api/sido");
         try{
             HttpEntity request = new HttpEntity(getHeaders());
-            URI uri = URI.create("http://apigateway/ankus-microservice/api/dong");
+
+            //http://[게이트웨이]/[해당 서비스에 맞는 path]/[해당 서비스에서 제공하는 API]
+
+            URI uri = URI.create("http://apigateway/ankus/api/dong");
 
             List<Dong> totalList = new ArrayList<>();
             for(String testArea :areaList) {
@@ -92,7 +95,7 @@ public class TestController {
         System.out.println("request api/sangho");
         try {
             HttpEntity request = new HttpEntity(getHeaders());
-            URI uri = URI.create("http://apigateway/ankus-microservice/api/sangho");
+            URI uri = URI.create("http://apigateway/ankus/api/sangho");
             UriComponents requestUriSangho = UriComponentsBuilder.fromHttpUrl(String.valueOf(uri)).
                         queryParam("dong", dong).
                         queryParam("upjong", business).build().encode("UTF-8");
