@@ -17,11 +17,11 @@
 
   - 프론트엔드 앱 개발
   
-- PaaS-TA에 앱 배포하기
+  - PaaS-TA에 앱 배포하기
   
-- 마이크로서비스 앱 구성
+  - 마이크로서비스 앱 구성
   
-- API 관리 
+  - API 관리 
   
 - ### [PaaS-TA 활용](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/paasta.md>)
 
