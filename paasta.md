@@ -154,9 +154,3 @@ eclipse에서 배포가 완료되었다면 PaaS-TA 포털을 통해서 확인할
 
 * 참고 : eclipse 에서 Java project로 생성한 프로젝트는 기본으로 Open PaaS 서버에서 배포가 가능한 앱으로 인식하지만 다른 프로젝트로 생성했다면 Project > Properties > Project Facets 에서 Cloud Foundry Application 항목을 체크한다. 
 
-
-
-서비스 인스턴스 생성하기
-
-
-
