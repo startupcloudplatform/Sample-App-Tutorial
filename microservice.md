@@ -175,7 +175,7 @@
 
    Spring Cloud Config Server
 
-   ![1557301378513](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/configserver.png)
+   ![1557301378513](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/configserver.png)
 
 
 
@@ -183,7 +183,7 @@
 
    클라이언트나 API 게이트웨이가 호출할 서비스를 찾는 매커니즘이 필요하고 이를 서비스 디스커버리(*Service Discovery*)라고 한다.
 
-   ![1558317067904](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/servicediscovery.png)
+   ![1558317067904](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/servicediscovery.png)
 
    
 
@@ -191,7 +191,7 @@
 
    Spring cloud의 ribbon은 Client에 탑재되어 있는 로드밸런서로 서버 사이드에서 필요했던 H/W 부담이 사라지고, 서버 목록 변경이 쉽고, 로드밸런싱 방식도 다양하게 설정하는 기능을 제공한다.
 
-   ![1557302745120](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/loadbalancer.png)
+   ![1557302745120](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/loadbalancer.png)
 
    
 
@@ -199,7 +199,7 @@
 
    - 마이크로서비스 앱 간의 중복적으로 발생하는 인증이나 로그와 같은 공통 기능을 API Gateway를 도입하면 하나의 단일 기능을 구성할 수 있다. Spring Cloud zuul은 외부 API 연동 시 기존 마이크로서비스의 수정을 하지 않고도 API만 공개할 수 있어 보안 안정성을 향상시킬 수 있다. 
 
-   ![1557302795564](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/gateway_zuul.png)
+   ![1557302795564](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/gateway_zuul.png)
 
    
 
@@ -209,7 +209,7 @@
 
    Circuit Breaker는 상태 머신(State Machine)으로 나타낼 수 있다. 접속 성공과 실패 이벤트가 발생할 때마다 내부 상태를 업데이트하여 자동적으로 장애를 검출하고 복구 여부를 판단한다.
 
-![1557449659836](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/circuitbreaker.png)
+![1557449659836](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/circuitbreaker.png)
 
 
 
