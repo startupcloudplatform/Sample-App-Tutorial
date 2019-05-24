@@ -23,9 +23,9 @@
 
 #### CF CLI 로그인
 
-CF CLI을 통해서도 접속이 가능하다. CF CLI 설치 가이드는 아래 링크를 참조한다.
+CF CLI을 통해서도 접속이 가능하다. CF CLI 설치와 사용 방법은 아래 링크를 참조한다.
 
-[CF CLI 설치 가이드](https://guide.paas-ta.kr/guide-1.0-spaghetti/use-guide/openpaas-cli)
+[참고자료](https://docs.cloudfoundry.org/cf-cli/)
 
 ```
 $ cf login -a 접속URI --skip-ssl-validation
