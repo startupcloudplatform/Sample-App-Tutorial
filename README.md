@@ -1,34 +1,3 @@
-# 창업 플랫폼 활용 가이드
-
- 
-
-- ### [클라우드 기반 창업 플랫폼 개요](#클라우드-기반-창업-플랫폼-개요)
-
-  - [SW개발 지원 서비스](#SW개발-지원-서비스)
-  - [시스템 구성도](#시스템-구성도)
-  - [연관 문서](#연관-문서)
-  - [PaaS-TA 기반](#PaaS-TA-기반)
-
-- ###  [샘플앱 개발 튜토리얼](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/Tutorial.md>)
-
-  - 샘플 앱 개요
-
-  - 백엔드 앱 개발
-
-  - 프론트엔드 앱 개발
-  
-  - PaaS-TA에 앱 배포하기
-  
-  - 마이크로서비스 앱 구성
-  
-  - API 관리 
-  
-- ### [PaaS-TA 활용](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/paasta.md>)
-
-- ### [마이크로서비스 개요](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/microservice.md>)
-
-  
-
 ------
 
 # 클라우드 기반 창업 플랫폼 개요
@@ -94,9 +63,7 @@
 
 ## 연관 문서
 
-- PaaS-TA 접속 및 로그인 계정
-
-- 창업 플랫폼 활용 튜토리얼
+- 창업 플랫폼 활용 튜토리얼(<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/Tutorial.md>)
 
 - 오픈데이터API 게이트웨이 포털 사용자 가이드
 
@@ -107,8 +74,6 @@
 - 마이크로서비스 스튜디오 사용자 가이드
 
   
-
-
 ## PaaS-TA 기반
 
  PaaS-TA 는 정부에서 오픈소스 Cloud Foundry를 기반으로 개발한 한국형 개방형 클라우드 플랫폼이다. 2015년 PaaS-TA 1.0출시 이후 2018년 12월에 PaaS-TA 링귀니 버전이 출시되었다. 창업플랫폼에서는 PaaS-TA 3.0(Penne) 기준으로 제공한다. 보다 자세한 내용은 아래 링크를 통해 확인할 수 있다. 
