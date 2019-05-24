@@ -5,18 +5,6 @@
 
 <https://guide.paas-ta.kr/guide-3.5-penne#undefined-4>
 
-
-
-### PaaS-TA 사용 신청하기
-
-PaaS-TA 3.0과 창업 플랫폼을 같이 운영하는 지원 센터를 통해서 신청이 가능하다. 현재는 K-ICT 클라우드혁신센터를 통해 무료로 제공하고 있지만 사용자 제한을 두고 있으니 웹사이트를 통해서 사용 가능 여부를 확인한다.
-
-K-ICT 클라우드 혁신 센터 [https://www.cloud.or.kr](https://www.cloud.or.kr/)
-
-LX정보공사 공간드림센터 (예정)
-
-
-
 ### PaaS-TA 로그인
 
 클라우드 기반 창업 플랫폼은 PaaS-TA 3.1, 3.5을 기준으로 제공하기 때문에 PaaS-TA 버전을 확인 한다.
