@@ -71,7 +71,7 @@
 
 - AI기반 상권분석 브로커 사용자 가이드
 
-- 마이크로서비스 스튜디오 사용자 가이드
+- [마이크로서비스 스튜디오 사용자 가이드](<https://github.com/startupcloudplatform/Microservices/blob/master/%EB%A7%88%EC%9D%B4%ED%81%AC%EB%A1%9C%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EB%A7%A4%EB%89%B4%EC%96%BC_v1.md>)
 
   
 ## PaaS-TA 기반
