@@ -28,6 +28,14 @@
 
 - #### [API 관리](#API-관리-기능)
 
+
+
+### 창업플랫폼 기능별 동영상 튜토리얼
+
+- [마이크로서비스 기반 어플리케이션 개발 방법](https://youtu.be/j-9Bs5SbB9k)
+- [PaaS-TA CF CLI 사용법](https://youtu.be/v_XLvzOyuqk)
+- [마이크로서비스 스튜디오 사용법](https://youtu.be/IMQBIMwfIMc)
+
  
 
 ### 참고 문서
@@ -112,7 +120,7 @@
 
 ## 백엔드 앱 개발 시작
 
- 
+
 ### 오픈데이터API 게이트웨이 시스템
 
 
