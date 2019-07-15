@@ -43,7 +43,7 @@
 
   웹포털 사이트로 제공하고 있어 별도의 시스템 요구사항이 없다.
 
-  [OPEN DATA GATEWAY PORTAL](http://182.252.131.40:3000)
+  [OPEN DATA GATEWAY PORTAL](http://203.245.1.104:3000)
 
   
 
