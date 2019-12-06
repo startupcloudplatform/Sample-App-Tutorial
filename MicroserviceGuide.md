@@ -27,7 +27,7 @@
 
 마이크로서비스 스튜디오는 Cloud Foundry의 모듈 및 서비스와 맵핑을 위해 서비스 브로커 기술을 적용하였다. 마이크로서비스 스튜디오 아키텍처는 다음과 같다.
 
-  ![그림입니다.  원본 그림의 이름: CLP000029bcbba3.bmp  원본 그림의 크기: 가로 784pixel, 세로 357pixel](file:///C:\Users\crosshan\AppData\Local\Temp\Hnc\BinData\EMB000362c04b10.bmp)  
+ ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/tree/master/images/MSA_Architecture.png)
 
 - 마이크로서비스 스튜디오는 가시화 도구(비주얼 편집기)를 이용하여 애플리케이션과 서비스의 관계를 구성할 수 있으며 Cloud Foundry에 푸시된 애플리케이션과 마켓에 등록된 서비스를 기본으로 사용할 수 있다. 
 - 마이크로서비스 스튜디오는 마이크로서비스 구성 시 API Gateway Server, Registry Service, Config Service 가 앱으로 자동 생성하고 화면상에서는 Gateway만 노출된다.
