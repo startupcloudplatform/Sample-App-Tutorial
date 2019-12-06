@@ -165,7 +165,7 @@
 
 1)     메인 페이지
 
-​    ![1558421260238](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/opendataapi.png)  
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/opendataapi.png)  
 
 \-       1. 로그인 및 회원가입
 
@@ -189,7 +189,7 @@
 
 2)     로그인
 
-   ![1558421452765](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/openlogin.png) 
+ ![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/openlogin.png) 
 
 
 
@@ -199,7 +199,7 @@
 
 3)     오픈데이터 API 검색(서울시 문화공간 현황)
 
-​       ![1558572796563](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/searchseoulspace.png)                  
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/searchseoulspace.png)                  
 
 \-       1. 오픈데이터 검색 창
 
@@ -209,7 +209,7 @@
 
 4)     서울시 문화공간 현황 API 상세 정보
 
-​     ![1558572943817](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/seoulspacedetail.png)     
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/seoulspacedetail.png)     
 
 \-       1. 서울시 문화공간 현황 조회 API 상세 정보
 
@@ -219,7 +219,7 @@
 
 5)      예제 코드 조회
 
-​      ![1558573046560](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/readcode.png)                                      
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/readcode.png)                                      
 
 
 
@@ -235,7 +235,7 @@
 
 1)     서울시 문화공간 현황 조회 코드 입력 화면
 
-​     ![1558573133977](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/storecode.png)                                                         
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/storecode.png)                                                         
 
 \-       1. 예제로 제공된 코드를 개발자가 필요한 부분에 입력 및 파싱한 화면
 
@@ -243,7 +243,7 @@
 
 2)     API 실행 결과 화면
 
-![1558573244893](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/runapi.png)
+![](https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/images/runapi.png)
 
    \-       1. 개발자가 입력 및 파싱 수행 한 결과 화면
 
