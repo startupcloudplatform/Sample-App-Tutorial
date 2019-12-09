@@ -63,7 +63,7 @@
 
 ## 연관 문서
 
-- [마이크로서비스 아키텍처 개발 활용 가이드](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/MicroserviceGuide.md>)
+- [마이크로서비스 스튜디오 활용 가이드](<https://github.com/startupcloudplatform/Sample-App-Tutorial/blob/master/MicroserviceGuide.md>)
 
 - 오픈데이터API 게이트웨이 포털 사용자 가이드
 
