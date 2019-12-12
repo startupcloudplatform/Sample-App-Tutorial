@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sample App</title>
+    <!-- css using bootStrap-->
+    <!-- original -->
+    <link rel="stylesheet" type="text/css" href="common/css/components/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="common/css/components/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="common/css/notosanskr.css">
+    <link rel="stylesheet" type="text/css" href="common/css/contents.css">
+
+    <script type="text/javascript" src="webjars/angularjs/1.7.7/angular.js"></script>
+    <!-- using route Define ngRoute module-->
+    <script type="text/javascript" src="webjars/angularjs/1.7.7/angular-route.min.js"></script>
+    <script type="text/javascript" src="webjars/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="webjars/jquery-ui/1.11.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- /는 resources/static을 의미 함-->
+    <script type="text/javascript" src="app.module.js"></script>
+    <!-- using route -->
+    <script type="text/javascript" src="app.route.js"></script>
+    <script type="text/javascript" src="app-form/app-form.controller.js"></script>
+    <script type="text/javascript" src="app-result/app-result.controller.js"></script>
+    <script type="text/javascript" src="app-main/app-main.controller.js"></script>
+
+</head>
+<body ng-app="sampleApp">
+    <div ng-view></div>
+</body>
+</html>

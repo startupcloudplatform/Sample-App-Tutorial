@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url(common.css);
+
+body{
+    background-color: transparent;
+}
+.background, .background>div{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}  
+.background .background-img{
+    background-image: url(../images/intro_bg.jpg)
+}
+.background>div {
+    background-repeat: no-repeat,no-repeat;
+    background-position: center center,center center;
+    background-size: cover,cover;
+}
+.login-container {
+    max-width: 420px;
+    margin: auto;
+    padding-top: 7%;
+}
+.m-b-md {
+    margin-bottom: 20px;
+}
+.hpanel {
+    background-color: none;
+    border: 0;
+    box-shadow: none;
+    margin-bottom: 25px;
+}
+.hpanel .panel-body {
+    background: transparent;  
+    padding: 20px;
+    position: relative;
+}  
+.btn-login{
+    background-color: #05617f;
+    border-color: #05617f;
+    color: #fff;
+    height: 51px; 
+    margin-top: 20px;
+}
+.btn-login:hover{
+    background-color: #0e5167;
+    border-color: #0e5167;
+    color: #fff; 
+}
+input[type="text"], input[type="password"], input[type="search"], textarea, select{
+    height: 42px !important;
+    padding: 6px 12px !important; 
+} 
+.login-container .logo-img{ 
+    margin-bottom: 15px;
+}
+.login-container small, .login-container .control-label{
+    color: #fff;
+}
+
+
+
+
+
+
