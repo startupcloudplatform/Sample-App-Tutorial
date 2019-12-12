@@ -1,8 +1,0 @@
----
-applications:
-  - name: startup-startup
-    memory: 1G
-    path: target/front-0.0.1-SNAPSHOT.jar
-    buildpack: java_buildpack-v4-15
-    env:
-      msa: yes
