@@ -1,8 +1,8 @@
-package com.example.sample;
+package com.example.sample.Domain;
 
 import java.util.List;
 
-class AnkusResultSido implements AnkusResultInterface<Dong> {
+public class AnkusResultSido implements AnkusResultInterface<Dong> {
     private String success;
     private String message;
     private String obj;

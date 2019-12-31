@@ -1,4 +1,4 @@
-package com.example.sample;
+package com.example.sample.Domain;
 
 import java.util.List;
 

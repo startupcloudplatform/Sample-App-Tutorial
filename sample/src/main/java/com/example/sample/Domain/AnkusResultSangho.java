@@ -1,8 +1,8 @@
-package com.example.sample;
+package com.example.sample.Domain;
 
 import java.util.List;
 
-class AnkusResultSangho implements AnkusResultInterface<Sangho> {
+public class AnkusResultSangho implements AnkusResultInterface<Sangho> {
     private String success;
     private String message;
     private String obj;

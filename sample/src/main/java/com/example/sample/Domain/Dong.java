@@ -1,4 +1,4 @@
-package com.example.sample;
+package com.example.sample.Domain;
 
 public class Dong {
     private Integer not_alivecnt;
